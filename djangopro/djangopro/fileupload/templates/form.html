@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form method="post" action="/store/" enctype="multipart/form-data">
+	{% csrf_token %}
+	<label>Image</label><br>
+	<input type="file" name="image"><br>
+	<input type="submit" name="sub">
+</form>
+</body>
+</html>

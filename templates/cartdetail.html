@@ -1,0 +1,39 @@
+{% extends 'master.html' %}
+
+{% block content %}
+
+<table border="2" style="border-collapse: collapse; float:left" width="80%">
+	<tr>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Brand</th>
+		<th>Quantity</th>
+		
+	</tr>
+	{% for data in data %}
+	<tr>
+		<td>{{ data.pname }}</td>
+		<td>{{ data.pprice }}</td>
+		<td>{{ data.pbrand }}</td>
+		<td>{{ data.quantity }}</td>		
+	{% endfor %}	
+
+	</tr>
+</table>
+
+<table border="2" style="border-collapse: collapse; float:right color:white;" width="20%">
+	<tr>
+		<th>Total</th>
+	</tr>
+			{% for total in total %}
+			<tr>
+				<td >
+				{{ total }}<br>
+				</td>
+			</tr>
+			{% endfor %}
+		
+</table>
+
+
+{% endblock %}

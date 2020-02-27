@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>show</title>
+	{% load staticfiles %}
+</head>
+<body>
+<table border="2" style="border-collapse: collapse;" width="100%">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Mobile</th>
+		<th>Image</th>
+		<th>Salary</th>
+		<th>Address</th>
+		<th colspan="2">Action</th>
+	</tr>
+	{% for employee in employee %}
+	<tr>
+		<td>{{ employee.name }}</td>
+		<td>{{ employee.email }}</td>
+		<td>{{ employee.mobile }}</td>
+		<td><img src="{{ employee.image.url }}" width="80"></td>
+		<td>{{ employee.salary }}</td>
+		<td>{{ employee.address }}</td>
+		<td><a href="/edit/{{ employee.id }}">Edit</a></td>
+		<td><a href="/delete/{{ employee.id }}">Delete</a></td>
+	</tr>
+	{% endfor %}
+</table>
+<center><a href="/emp/">Add Data</a></center>
+</body>
+</html>

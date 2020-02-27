@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	{% load staticfiles %}
+</head>
+<body>
+<form action="/update/{{ employee.id }}" method="get">
+	<!-- {% csrf_token %} -->
+	<label>Name</label><br>
+	<input type="text" name="name" value="{{ employee.name }}">
+	<br>
+	<label>Email</label><br>
+	<input type="email" name="email" value="{{ employee.email }}">
+	<br>
+	<label>Mobile</label><br>
+	<input type="text" name="mobile" value="{{ employee.mobile }}"><br>
+	<label>Salary</label><br>
+	<input type="text" name="salary" value="{{ employee.salary }}">
+	<br>
+	<label>Address</label><br>
+	<input type="text" name="address" value="{{ employee.address }}">
+	<br>
+
+	<button type="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	{% load staticfiles %}
+</head>
+<body>
+	<form action="/emp/" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<label>Name</label><br>
+		<input type="text" name="name"><br>
+		<label>Email</label><br>
+		<input type="email" name="email"><br>
+		<label>Mobile</label><br>
+		<input type="text" name="mobile"><br>
+		<label>Image</label><br>
+		<input type="file" name="image"><br>
+		
+		<label>Salary</label><br>
+		<input type="text" name="salary"><br>
+		<label>Address</label><br>
+		<textarea rows="5" name="address"></textarea><br><br>
+		<button name="submit">Submit</button>
+
+	</form>
+</body>
+</html>
